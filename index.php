@@ -2,10 +2,7 @@
 // Version
 define('VERSION', '1.5.3.1');
 
-if(!isset($_GET['dev'])){
-    header("Location: home.html");
-} elseif ($_GET['dev'] == 1) {
-    // Configuration
+// Configuration
 require_once('config.php');
    
 // Install 
@@ -177,15 +174,11 @@ if (!isset($request->cookie['language']) || $request->cookie['language'] != $cod
 }			
 
 $config->set('config_language_id', $languages[$code]['language_id']);
-//$config->set('config_language_id', $languages['ENG']['language_id']);
 $config->set('config_language', $languages[$code]['code']);
-//$config->set('config_language', $languages['ENG']['code']);
 
 // Language	
 $language = new Language($languages[$code]['directory']);
-//$language = new Language($languages['ENG']['directory']);
 $language->load($languages[$code]['filename']);	
-//$language->load($languages['ENG']['filename']);	
 $registry->set('language', $language); 
 
 // Document
@@ -240,5 +233,4 @@ $controller->dispatch($action, new Action('error/not_found'));
 
 // Output
 $response->output();
-}
 ?>

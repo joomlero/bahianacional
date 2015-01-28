@@ -1,15 +1,15 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://bahianacional.mx/');
-define('HTTP_IMAGE', 'http://bahianacional.mx/image/');
-define('HTTP_ADMIN', 'http://bahianacional.mx/admin/');
+define('HTTP_SERVER', 'http://bahianacional.mx/dev/');
+define('HTTP_IMAGE', 'http://bahianacional.mx/dev/image/');
+define('HTTP_ADMIN', 'http://bahianacional.mx/dev/admin/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://bahianacional.mx/');
-define('HTTPS_IMAGE', 'http://bahianacional.mx/image/');
+define('HTTPS_SERVER', 'http://bahianacional.mx/dev/');
+define('HTTPS_IMAGE', 'http://bahianacional.mx/dev/image/');
 
 // DIR
-define('DIR_PATH','/home/alvaromanzo81/public_html');
+define('DIR_PATH','/home/alvaromanzo81/public_html/dev/');
 define('DIR_APPLICATION', DIR_PATH.'/catalog/');
 define('DIR_SYSTEM', DIR_PATH.'/system/');
 define('DIR_DATABASE', DIR_PATH.'/system/database/');
