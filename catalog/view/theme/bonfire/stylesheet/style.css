@@ -769,7 +769,7 @@ a{ text-decoration:none; }
 .login input { margin: 0px 0px 15px 0px; width: 200px; height: 26px; padding: 0px 10px; color: #4c4c4c; font: 12px/26px Arial, Helvetica, sans-serif; border:none; outline: none; background:url(../images/login-input-BG.png) no-repeat; }
 
 #login-footer {margin: 30px auto 80px auto; width: 400px; color:#C2C3C3;}
-#login-imagen {height: 118px; width: 118px; margin: 25px auto 0 auto; background: url(../images/SELLO.jpg) no-repeat;}
+#login-imagen {height: 90px; width: 204px; margin: 25px auto 0 auto; background: url(../images/bahiasello.jpg) no-repeat;}
 
 
 /** CHECKOUT **/

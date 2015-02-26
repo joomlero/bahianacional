@@ -99,10 +99,23 @@
                     <cite class="brand"><?php echo $text_manufacturer; ?> <span><a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a></span></cite>
                 <?php } */?>
                 <br>
+                <?php
+                    if($show_attribute == 1){
+                ?>
                 <p><?php echo $text_length;?>: <?php echo $text_length_product;?></p>
-                <p><?php echo $text_width;?>: <?php echo $text_width_product;?></p>
+                <p>
+                    <?php echo $text_width;?>: <?php 
+                    echo $text_width_product;
+                    if($width_range > 0){
+                    echo ' '.$text_width_range.' '.$width_range;
+                    }
+                    ?> 
+                </p>
                 <p><?php echo $text_height;?>: <?php echo $text_height_product;?></p>
                 <p><?php echo $text_weight;?>: <?php echo $text_weight_product;?></p>
+                <?php
+                    }
+                ?>
                 <?php 
                 //print '<pre>'.print_r($attribute_groups,true).'</pre>';
             /* if ($attribute_groups) { ?>

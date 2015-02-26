@@ -26,6 +26,6 @@ define('DB_DRIVER', 'mysql');
 define('DB_HOSTNAME', 'localhost');
 define('DB_USERNAME', 'admindb');
 define('DB_PASSWORD', 'fQO5g&F?h7-s');
-define('DB_DATABASE', 'frescobol_oc');
+define('DB_DATABASE', 'frescobol_desarrollo');
 define('DB_PREFIX', '');
 ?>

@@ -29,6 +29,7 @@ $_['text_error']        = 'Product not found!';
 $_['text_length']       = 'Length';
 $_['text_weight']       = 'Weight';
 $_['text_width']        = 'Width';
+$_['text_width_range']  = 'to';
 $_['text_height']       = 'Height';
 $_['text_relacionado']  = 'RELATED';
 $_['text_add_cart']     = 'ADD';

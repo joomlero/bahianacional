@@ -553,6 +553,8 @@ class ControllerCatalogProduct extends Controller {
 		$this->data['entry_minimum'] = $this->language->get('entry_minimum');
 		$this->data['entry_manufacturer'] = $this->language->get('entry_manufacturer');
     	$this->data['entry_shipping'] = $this->language->get('entry_shipping');
+    	$this->data['entry_show_attribute'] = $this->language->get('entry_show_attribute');
+    	$this->data['entry_width_range'] = $this->language->get('entry_width_range');
     	$this->data['entry_date_available'] = $this->language->get('entry_date_available');
     	$this->data['entry_quantity'] = $this->language->get('entry_quantity');
 		$this->data['entry_stock_status'] = $this->language->get('entry_stock_status');
@@ -701,7 +703,7 @@ class ControllerCatalogProduct extends Controller {
 		if (isset($this->request->get['product_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
       		$product_info = $this->model_catalog_product->getProduct($this->request->get['product_id']);
     	}
-
+        
 		$this->data['token'] = $this->session->data['token'];
 		
 		$this->load->model('localisation/language');
@@ -806,6 +808,21 @@ class ControllerCatalogProduct extends Controller {
       		$this->data['manufacturer_id'] = 0;
     	} 
 		
+    	if (isset($this->request->post['show_atribute'])) {
+      		$this->data['show_atribute'] = $this->request->post['show_atribute'];
+    	} elseif (!empty($product_info)) {
+      		$this->data['show_atribute'] = $product_info['show_atribute'];
+    	} else {
+			$this->data['show_atribute'] = 1;
+		}
+                
+    	if (isset($this->request->post['width_range'])) {
+      		$this->data['width_range'] = $this->request->post['width_range'];
+    	} elseif (!empty($product_info)) {
+      		$this->data['width_range'] = $product_info['width_range'];
+    	} else {
+                $this->data['width_range'] = '';
+        }
     	if (isset($this->request->post['shipping'])) {
       		$this->data['shipping'] = $this->request->post['shipping'];
     	} elseif (!empty($product_info)) {
