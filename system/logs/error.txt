@@ -1282,3 +1282,7 @@
 2015-03-02 19:14:48 - PHP Notice:  Undefined index: name in /var/www/html/bahianacional/catalog/controller/product/category.php on line 217
 2015-03-02 19:14:48 - PHP Notice:  Undefined index: name in /var/www/html/bahianacional/catalog/controller/product/category.php on line 217
 2015-03-02 19:14:48 - PHP Notice:  Undefined index: name in /var/www/html/bahianacional/catalog/controller/product/category.php on line 217
+2015-03-02 19:20:21 - PHP Notice:  Undefined variable: imagenCollection in /var/www/html/bahianacional/catalog/controller/product/category.php on line 270
+2015-03-02 19:20:21 - PHP Notice:  Undefined variable: imagenCollection in /var/www/html/bahianacional/catalog/controller/product/category.php on line 270
+2015-03-02 19:20:21 - PHP Notice:  Undefined variable: imagenCollection in /var/www/html/bahianacional/catalog/controller/product/category.php on line 270
+2015-03-02 19:20:21 - PHP Notice:  Undefined variable: imagenCollection in /var/www/html/bahianacional/catalog/controller/product/category.php on line 270

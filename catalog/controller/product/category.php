@@ -141,7 +141,6 @@ class ControllerProductCategory extends Controller {
 				);
 			}
                         
-			print 'productos totales<pre>'.print_r($productsOfCategory,true).'</pre>';
 			$this->data['products'] = array();
 			
 			$data[] = array(
@@ -214,29 +213,27 @@ class ControllerProductCategory extends Controller {
 //				);
 //			}
 			foreach ($productsOfCategory as $key => $category) {
-                            foreach($category as $key2 => $product){
-                                echo $product['name'].'<br>';    
-                            }
-                            
-                        }
-                        
-                        /*foreach ($productsOfCategory as $key => $result) {
-				if ($result['image']) {
+                            foreach($category as $key2 => $result){
+                                
+                                if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
 				} else {
 					$image = false;
 				}
-				$imagesProducts = $this->model_catalog_product->getProductImages($result['product_id']);
-                                foreach($imagesProducts as $imagenes){
-                                    $arrImagen = explode("-", $imagenes['image']);
-                                    if(isset($arrImagen[1]) && $arrImagen[1] == 'collection_change.jpg'){
-                                        $imagenCollection = $this->model_tool_image->resize($imagenes['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
-                                        break;
-                                    } else {
-                                        $imagenCollection = '';
-                                    }
+                           
+                            
+                            $imagesProducts = $this->model_catalog_product->getProductImages($result['product_id']);
+                            foreach($imagesProducts as $imagenes){
+                                $arrImagen = explode("-", $imagenes['image']);
+                                if(isset($arrImagen[1]) && $arrImagen[1] == 'collection_change.jpg'){
+                                    $imagenCollection = $this->model_tool_image->resize($imagenes['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
+                                    break;
+                                } else {
+                                    $imagenCollection = '';
                                 }
-				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+                            }
+                            
+                            if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
 				} else {
 					$price = false;
@@ -259,8 +256,8 @@ class ControllerProductCategory extends Controller {
 				} else {
 					$rating = false;
 				}
-								
-				$this->data[]['products'][] = array(
+                                
+                                $this->data[$key]['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
 					'name'        => $result['name'],
@@ -273,8 +270,9 @@ class ControllerProductCategory extends Controller {
 					'image_collection' => $imagenCollection,
 					'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'])
 				);
-			}
-                        */
+                             }
+                        }
+                        print 'productos totales<pre>'.print_r($this->data,true).'</pre>';
 			$url = '';
 	
 			if (isset($this->request->get['limit'])) {
