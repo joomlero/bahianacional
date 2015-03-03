@@ -126,34 +126,101 @@ class ControllerProductCategory extends Controller {
 			$results = $this->model_catalog_category->getCategories($category_id);
 			
 			foreach ($results as $result) {
-				$data = array(
+				$dataCategories = array(
 					'filter_category_id'  => $result['category_id'],
 					'filter_sub_category' => true	
 				);
-							
-				$product_total = $this->model_catalog_product->getTotalProducts($data);
+                                $results2 = $this->model_catalog_product->getProductsByCategory($dataCategories);
+                                $productsOfCategory[$result['category_id']]=$results2;
+				$product_total = $this->model_catalog_product->getTotalProductsByCategory($result['category_id']);
 				
 				$this->data['categories'][] = array(
+					'category_id'  => $result['category_id'],
 					'name'  => $result['name'] . ' (' . $product_total . ')',
 					'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '_' . $result['category_id'] . $url)
 				);
 			}
-			
+                        
+			print 'productos totales<pre>'.print_r($productsOfCategory,true).'</pre>';
 			$this->data['products'] = array();
 			
-			$data = array(
+			$data[] = array(
 				'filter_category_id' => $category_id, 
 				'sort'               => $sort,
 				'order'              => $order,
 				'start'              => ($page - 1) * $limit,
 				'limit'              => $limit
 			);
-					
-			$product_total = $this->model_catalog_product->getTotalProducts($data); 
-			
-			$results = $this->model_catalog_product->getProducts($data);
-			
-			foreach ($results as $result) {
+			//print '2CATEGORIAS<pre>'.print_r($this->data['categories'],true).'</pre>';
+                        
+			//$product_total = $this->model_catalog_product->getTotalProducts($data); 
+                        
+                        
+                        
+//			$results = $this->model_catalog_product->getProducts($data);
+//			
+//			foreach ($results as $result) {
+//				if ($result['image']) {
+//					$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
+//				} else {
+//					$image = false;
+//				}
+//				$imagesProducts = $this->model_catalog_product->getProductImages($result['product_id']);
+//                                foreach($imagesProducts as $imagenes){
+//                                    $arrImagen = explode("-", $imagenes['image']);
+//                                    if(isset($arrImagen[1]) && $arrImagen[1] == 'collection_change.jpg'){
+//                                        $imagenCollection = $this->model_tool_image->resize($imagenes['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
+//                                        break;
+//                                    } else {
+//                                        $imagenCollection = '';
+//                                    }
+//                                }
+//				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+//					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
+//				} else {
+//					$price = false;
+//				}
+//				
+//				if ((float)$result['special']) {
+//					$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
+//				} else {
+//					$special = false;
+//				}	
+//				
+//				if ($this->config->get('config_tax')) {
+//					$tax = $this->currency->format((float)$result['special'] ? $result['special'] : $result['price']);
+//				} else {
+//					$tax = false;
+//				}				
+//				
+//				if ($this->config->get('config_review_status')) {
+//					$rating = (int)$result['rating'];
+//				} else {
+//					$rating = false;
+//				}
+//								
+//				$this->data['products'][] = array(
+//					'product_id'  => $result['product_id'],
+//					'thumb'       => $image,
+//					'name'        => $result['name'],
+//					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, 100) . '..',
+//					'price'       => $price,
+//					'special'     => $special,
+//					'tax'         => $tax,
+//					'rating'      => $result['rating'],
+//					'reviews'     => sprintf($this->language->get('text_reviews'), (int)$result['reviews']),
+//					'image_collection' => $imagenCollection,
+//					'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'])
+//				);
+//			}
+			foreach ($productsOfCategory as $key => $category) {
+                            foreach($category as $key2 => $product){
+                                echo $product['name'].'<br>';    
+                            }
+                            
+                        }
+                        
+                        /*foreach ($productsOfCategory as $key => $result) {
 				if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
 				} else {
@@ -193,7 +260,7 @@ class ControllerProductCategory extends Controller {
 					$rating = false;
 				}
 								
-				$this->data['products'][] = array(
+				$this->data[]['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
 					'name'        => $result['name'],
@@ -207,7 +274,7 @@ class ControllerProductCategory extends Controller {
 					'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'])
 				);
 			}
-			
+                        */
 			$url = '';
 	
 			if (isset($this->request->get['limit'])) {

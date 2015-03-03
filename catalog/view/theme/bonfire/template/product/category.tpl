@@ -23,6 +23,7 @@
 			<?php */?>								  
 		<ul class="clearfix grid-view">
 		<?php 
+                print '<pre>'.print_r($categories,true).'</pre>';
                 foreach ($products as $key => $product) { ?>
 			<li class="product <?php if(((($key+1)%3) == 0)) echo 'last'; ?>">
                             <div class="data" style="width:270px; text-align: center;">
