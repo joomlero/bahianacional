@@ -128,7 +128,9 @@ class ControllerProductCategory extends Controller {
 			foreach ($results as $result) {
 				$dataCategories = array(
 					'filter_category_id'  => $result['category_id'],
-					'filter_sub_category' => true	
+					'filter_sub_category' => true,
+                                        'sort'               => $sort,
+                                        'order'              => $order
 				);
                                 $results2 = $this->model_catalog_product->getProductsByCategory($dataCategories);
                                 $productsOfCategory[$result['category_id']]=$results2;
@@ -257,7 +259,7 @@ class ControllerProductCategory extends Controller {
 					$rating = false;
 				}
                                 
-                                $this->data[$key]['products'][] = array(
+                                $this->data['categorias'][$key]['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
 					'name'        => $result['name'],
@@ -272,7 +274,7 @@ class ControllerProductCategory extends Controller {
 				);
                              }
                         }
-                        print 'productos totales<pre>'.print_r($this->data,true).'</pre>';
+                       
 			$url = '';
 	
 			if (isset($this->request->get['limit'])) {

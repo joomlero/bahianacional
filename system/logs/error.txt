@@ -1286,3 +1286,7 @@
 2015-03-02 19:20:21 - PHP Notice:  Undefined variable: imagenCollection in /var/www/html/bahianacional/catalog/controller/product/category.php on line 270
 2015-03-02 19:20:21 - PHP Notice:  Undefined variable: imagenCollection in /var/www/html/bahianacional/catalog/controller/product/category.php on line 270
 2015-03-02 19:20:21 - PHP Notice:  Undefined variable: imagenCollection in /var/www/html/bahianacional/catalog/controller/product/category.php on line 270
+2015-03-02 23:00:24 - PHP Notice:  Undefined variable: query in /var/www/html/bahianacional/catalog/model/catalog/product.php on line 296
+2015-03-02 23:00:24 - PHP Notice:  Undefined variable: query in /var/www/html/bahianacional/catalog/model/catalog/product.php on line 296
+2015-03-02 23:00:24 - PHP Notice:  Undefined variable: query in /var/www/html/bahianacional/catalog/model/catalog/product.php on line 296
+2015-03-02 23:00:24 - PHP Notice:  Undefined variable: query in /var/www/html/bahianacional/catalog/model/catalog/product.php on line 296

@@ -244,7 +244,7 @@ a{ text-decoration:none; }
 .product-listing-related a {
     text-align:center;
 }
-.product { position:relative; float: left; margin:5px 0px 30px 0px; padding: 20px; width: 270px; height: 335px; background-color: #ffffff; border: 0px solid #ffffff; 
+.product { position:relative; float: left; margin:5px 0px 30px 0px; padding: 20px; width: 247px; height: 335px; background-color: #ffffff; border: 0px solid #ffffff; 
 	-moz-border-radius: 0px; 
 	-webkit-border-radius: 0px; 
 	border-radius: 0px; 
@@ -301,7 +301,7 @@ a{ text-decoration:none; }
 .grid-view .product p { display: none; }
 
 /** ALL-PRODUCT **/
-#all-product { margin-left: 17%; width: 700px; float: left; }
+#all-product { margin-left: 50px; width: 875px; float: left; }
 #all-product h3 { position: relative; background: url(../images/heading-ruler.png) 0px 10px repeat-x; color: #747272; font: 24px/24px 'corbelregular',Arial, Helvetica, sans-serif; margin: 0px 0px 40px 0px; }
 #all-product h3 span {  background:url(../images/bg.png) center center; padding-right:10px; }
 #all-product h3 .list { color: #C2C3C3; cursor: pointer; font: 14px/10px 'corbelregular',Arial, Helvetica, sans-serif; background: url(../images/bg.png) center center; padding: 0px 10px 0px 10px; position: absolute; right: 45px; top:10px; }
