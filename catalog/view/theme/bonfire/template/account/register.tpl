@@ -220,7 +220,7 @@
 			  </form>
 		<div id="login-footer">
                 <p style="margin-top: 20px; text-align: center; font-style: italic; font-size:13px; font-family: Arial,Helvetica,sans-serif;"><?php echo $text_account_already; ?></p>
-                <div id="login-imagen"></div>
+                
             </div>
                 </div>
             

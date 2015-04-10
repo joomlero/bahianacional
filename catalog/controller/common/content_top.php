@@ -47,6 +47,7 @@ class ControllerCommonContentTop extends Controller {
 			
 			if ($modules) {
 				foreach ($modules as $module) {
+                                   // print '<pre>'.print_r($module,true).'</pre>';
 					if ($module['layout_id'] == $layout_id && $module['position'] == 'content_top' && $module['status']) {
 						$module_data[] = array(
 							'code'       => $extension['code'],
@@ -59,10 +60,10 @@ class ControllerCommonContentTop extends Controller {
 		}
 		
 		$sort_order = array(); 
-	  
+	 
 		foreach ($module_data as $key => $value) {
-      		$sort_order[$key] = $value['sort_order'];
-    	}
+                    $sort_order[$key] = $value['sort_order'];
+                }
 		
 		array_multisort($sort_order, SORT_ASC, $module_data);
 		
@@ -75,7 +76,7 @@ class ControllerCommonContentTop extends Controller {
 				$this->data['modules'][] = $module;
 			}
 		}
-
+                 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/content_top.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/common/content_top.tpl';
 		} else {

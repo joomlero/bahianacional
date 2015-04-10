@@ -24,7 +24,9 @@
 <br />
 <?php if ($text_agree) { ?>
 <div class="buttons">
-  <div style="float: right;"><p class="msg"><?php echo $text_agree; ?>
+  <div style="float: right;">
+      <p><img src="catalog/view/theme/bonfire/image/paypal_seguro.png"/></p>
+      <p class="msg"><?php echo $text_agree; ?>
     <?php if ($agree) { ?>
     <input type="checkbox" name="agree" value="1" checked="checked" />
     <?php } else { ?>

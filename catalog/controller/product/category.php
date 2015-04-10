@@ -138,7 +138,7 @@ class ControllerProductCategory extends Controller {
 				
 				$this->data['categories'][] = array(
 					'category_id'  => $result['category_id'],
-					'name'  => $result['name'] . ' (' . $product_total . ')',
+					'name'  => $result['name'],
 					'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '_' . $result['category_id'] . $url)
 				);
 			}

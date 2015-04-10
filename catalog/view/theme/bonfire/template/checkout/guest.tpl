@@ -40,12 +40,8 @@
     <br />
     <br />
   </div>
-  <div id="company-id-display"><span id="company-id-required" class="required">*</span> <?php echo $entry_company_id; ?><br />
-    <input type="text" name="company_id" value="<?php echo $company_id; ?>" class="text" />
-    <br />
-    <br />
-  </div>
   <div id="tax-id-display"><span id="tax-id-required" class="required">*</span> <?php echo $entry_tax_id; ?><br />
+      <input type="hidden" name="company_id" value="1" class="text" />
     <input type="text" name="tax_id" value="<?php echo $tax_id; ?>" class="text" />
     <br />
     <br />
