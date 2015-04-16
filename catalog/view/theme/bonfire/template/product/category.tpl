@@ -6,7 +6,7 @@
             $categoriaId = $categoria['category_id'];
             if(!empty($categorias[$categoriaId])){ ?>
     <div><p class="clearfix"></p>
-        <div style="height: 25px; color:#19233a; font:13px corbelregular,Arial,Helvetica,sans-serif; border-bottom: #19233a solid thin"><?=$categoria['name']?></div>
+        
         <div id="all-product">
 	<?php if (!empty($categorias[$categoriaId]['products'])) {
 		foreach($categorias[$categoriaId]['products'] as $product){
