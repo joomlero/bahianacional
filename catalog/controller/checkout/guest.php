@@ -266,7 +266,7 @@ class ControllerCheckoutGuest extends Controller {
 			$this->session->data['guest']['payment']['firstname'] = $this->request->post['firstname'];
 			$this->session->data['guest']['payment']['lastname'] = $this->request->post['lastname'];				
 			$this->session->data['guest']['payment']['company'] = $this->request->post['company'];
-			$this->session->data['guest']['payment']['company_id'] = $this->request->post['company_id'];
+			$this->session->data['guest']['payment']['company_id'] = 1;
 			$this->session->data['guest']['payment']['tax_id'] = $this->request->post['tax_id'];
 			$this->session->data['guest']['payment']['address_1'] = $this->request->post['address_1'];
 			$this->session->data['guest']['payment']['address_2'] = $this->request->post['address_2'];

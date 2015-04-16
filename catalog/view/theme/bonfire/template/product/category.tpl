@@ -1,8 +1,17 @@
 <?php echo $header; ?><?php //echo $column_left; ?><?php //echo $column_right; ?>
 <div class="inner-container clearfix"><?php //echo $content_top; ?>
-  <div id="all-product">
-	<?php if ($products) { ?>
-		<?php if ($thumb || $description) { ?>
+    <?php
+        //print 'productos totales<pre>'.print_r($categorias,true).'</pre>';
+        foreach($categories as $categoria){
+            $categoriaId = $categoria['category_id'];
+            if(!empty($categorias[$categoriaId])){ ?>
+    <div><p class="clearfix"></p>
+        <div style="height: 25px; color:#19233a; font:13px corbelregular,Arial,Helvetica,sans-serif; border-bottom: #19233a solid thin"><?=$categoria['name']?></div>
+        <div id="all-product">
+	<?php if (!empty($categorias[$categoriaId]['products'])) {
+		foreach($categorias[$categoriaId]['products'] as $product){
+                }
+                if ($thumb || $description) { ?>
 		  <div class="cat-description">
 			<?php if ($thumb) { ?>
 			<div class="thumb"><img src="<?php echo $thumb; ?>" alt="<?php echo $heading_title; ?>" /></div>
@@ -23,9 +32,10 @@
 			<?php */?>								  
 		<ul class="clearfix grid-view">
 		<?php 
-                foreach ($products as $key => $product) { ?>
+                
+                foreach ($categorias[$categoriaId]['products'] as $key => $product) { ?>
 			<li class="product <?php if(((($key+1)%3) == 0)) echo 'last'; ?>">
-                            <div class="data" style="width:270px; text-align: center;">
+                            <div class="data" style="width:270px; text-align: center; margin-top:-35px;">
                                 <?php
                                     $arrProductoName = explode('-',$product['name']);
                                     $productName = $arrProductoName[0];
@@ -58,19 +68,19 @@
 						<?php } ?>
 					</div>-->
 				  </div>
-				<a href="<?php echo $product['href']; ?>" class="thumb">
+				<a href="<?php echo $product['href']; ?>" class="thumb" style="margin-left: 36px!important;">
                                     <?php
-                                        if($product['image_collection'] != ''){ 
+                                        /*if($product['image_collection'] != ''){ 
                                         $imagenCambio = $product['image_collection'];
                                         $imagenOriginal = $product['thumb'];
                                         ?>
                                         <img id="<?php echo $product['product_id']; ?>" src="<?php echo $product['thumb']; ?>" onmouseout="cambiaImagenOut(this.id,'<?=$imagenOriginal?>')" onmouseover="cambiaImagenHover(this.id,'<?=$imagenCambio?>')" alt="<?php echo $product['name']; ?>" />
                                     <?php 
-                                        } else { 
+                                        } else { */
                                     ?>
                                         <img id="<?php echo $product['product_id']; ?>" src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" />
                                     <?php    
-                                        }
+                                       // }
                                     ?>
                                 </a>
 				  
@@ -79,9 +89,16 @@
 		</ul>
 		<div class="pagination"><?php echo $pagination; ?></div>
 		<?php } else { ?>
-		  <p class="msg"><?php echo $text_empty; ?></p>
+		  <p class="msg"><?php //echo $text_empty; ?></p>
 		<?php }?>
 	</div><!-- end of #product-list -->
+    </div>    
+                
+            <?php } else {
+                continue;
+            }
+        }//Fin ciclo por categoria
+    ?>
 					
   <?php echo $content_bottom; ?></div>
   <script type="text/javascript"><!--

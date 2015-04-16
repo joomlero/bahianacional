@@ -77,7 +77,9 @@
 		  </table>
 	  </form>
 	  <div class="left-column">
-	  <?php if ($coupon_status || $voucher_status || $reward_status || $shipping_status) { ?>
+	  <?php 
+          /*
+          if ($coupon_status || $voucher_status || $reward_status || $shipping_status) { ?>
 	  <h3><span><?php echo $text_next; ?></span></h3>
 		<div class="accordion">
 			<?php if ($coupon_status) { ?>					
@@ -149,7 +151,8 @@
 			</div>
 			<?php } ?>
 		</div>
-	  <?php } ?>
+	  <?php //} */
+          ?>
 	  </div>
 	  <div class="right-column">
 		<?php foreach ($totals as $total) { ?>
@@ -163,7 +166,8 @@
 			<a href="<?php echo $checkout; ?>" class="button cont"><?php echo $button_checkout; ?></a>
 		</p>
 		<br />
-		<p><a href="<?php echo $continue; ?>"><?php echo $button_shopping; ?> &rarr;</a></p>
+                <p><img src="catalog/view/theme/bonfire/image/paypal_seguro.png"/></p>
+                <p><a href="<?php echo $continue; ?>"><?php echo $button_shopping; ?> &rarr;</a></p>
 	  </div>
 	</div>
   <?php echo $content_bottom; ?></div>

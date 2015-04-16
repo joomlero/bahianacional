@@ -31,6 +31,7 @@ $_['text_length']       = 'Largo';
 $_['text_weight']       = 'Peso';
 $_['text_width']        = 'Ancho';
 $_['text_height']       = 'Alto';
+$_['text_width_range']  = 'a';
 
 // Entry
 $_['entry_name']        = 'Nombre:';

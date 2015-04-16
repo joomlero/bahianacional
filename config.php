@@ -1,15 +1,15 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://bahianacional.mx/dev/');
-define('HTTP_IMAGE', 'http://bahianacional.mx/dev/image/');
-define('HTTP_ADMIN', 'http://bahianacional.mx/dev/admin/');
+define('HTTP_SERVER', 'http://localhost/bahianacional/');
+define('HTTP_IMAGE', 'http://localhost/bahianacional/image/');
+define('HTTP_ADMIN', 'localhost/bahianacional/admin/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://bahianacional.mx/dev/');
-define('HTTPS_IMAGE', 'http://bahianacional.mx/dev/image/');
+define('HTTPS_SERVER', 'http://localhost/bahianacional/');
+define('HTTPS_IMAGE', 'http://localhost/bahianacional/image/');
 
 // DIR
-define('DIR_PATH','/home/alvaromanzo81/public_html/dev/');
+define('DIR_PATH','/var/www/html/bahianacional/');
 define('DIR_APPLICATION', DIR_PATH.'/catalog/');
 define('DIR_SYSTEM', DIR_PATH.'/system/');
 define('DIR_DATABASE', DIR_PATH.'/system/database/');
@@ -24,8 +24,8 @@ define('DIR_LOGS', DIR_PATH.'/system/logs/');
 // DB
 define('DB_DRIVER', 'mysql');
 define('DB_HOSTNAME', 'localhost');
-define('DB_USERNAME', 'admindb');
-define('DB_PASSWORD', 'fQO5g&F?h7-s');
-define('DB_DATABASE', 'frescobol_oc');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', 'sistemas');
+define('DB_DATABASE', 'fresobol_desarrollo');
 define('DB_PREFIX', '');
 ?>

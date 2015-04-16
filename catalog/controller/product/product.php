@@ -119,6 +119,12 @@ class ControllerProductProduct extends Controller {
                             $this->data['text_height_product'] = 0;
                         }
                         
+                        if(isset($product_info['width_range']) && $product_info['width_range'] > 0){
+                            $this->data['width_range'] = $instAlto->format($product_info['width_range'],$product_info['length_class_id']);
+                        } else {
+                            $this->data['width_range'] = 0;
+                        }
+                        
                         if(isset($product_info['width']) && $product_info['width'] > 0){
                             $this->data['text_width_product'] = $instAlto->format($product_info['width'],$product_info['length_class_id']);
                         } else {
@@ -161,6 +167,7 @@ class ControllerProductProduct extends Controller {
 			$this->document->addLink($this->url->link('product/product', 'product_id=' . $this->request->get['product_id']), 'canonical');
 			
 			$this->data['heading_title'] = $product_info['name'];
+			$this->data['show_attribute'] = $product_info['show_atribute'];
 			
 			
 			$this->data['text_select'] = $this->language->get('text_select');
@@ -202,6 +209,7 @@ class ControllerProductProduct extends Controller {
 
 			$this->data['text_length'] = $this->language->get('text_length');
 			$this->data['text_weight'] = $this->language->get('text_weight');
+			$this->data['text_width_range'] = $this->language->get('text_width_range');
 			$this->data['text_width'] = $this->language->get('text_width');
 			$this->data['text_height'] = $this->language->get('text_height');
 			$this->data['tab_attribute'] = $this->language->get('tab_attribute');

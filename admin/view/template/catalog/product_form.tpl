@@ -151,10 +151,28 @@
               <td><input type="text" name="date_available" value="<?php echo $date_available; ?>" size="12" class="date" /></td>
             </tr>
             <tr>
+              <td><?php echo $entry_show_attribute; ?></td>
+              <td><?php if ($show_atribute) { ?>
+                <input type="radio" name="show_atribute" value="1" checked="checked" />
+                <?php echo $text_yes; ?>
+                <input type="radio" name="show_atribute" value="0" />
+                <?php echo $text_no; ?>
+                <?php } else { ?>
+                <input type="radio" name="show_atribute" value="1" />
+                <?php echo $text_yes; ?>
+                <input type="radio" name="show_atribute" value="0" checked="checked" />
+                <?php echo $text_no; ?>
+                <?php } ?></td>
+            </tr>
+            <tr>
               <td><?php echo $entry_dimension; ?></td>
               <td><input type="text" name="length" value="<?php echo $length; ?>" size="4" />
                 <input type="text" name="width" value="<?php echo $width; ?>" size="4" />
                 <input type="text" name="height" value="<?php echo $height; ?>" size="4" /></td>
+            </tr>
+            <tr>
+              <td><?php echo $entry_width_range; ?></td>
+              <td><input type="text" name="width_range" value="<?php echo $width_range; ?>" size="4" /></td>
             </tr>
             <tr>
               <td><?php echo $entry_length; ?></td>

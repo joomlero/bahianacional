@@ -10,8 +10,9 @@
     <?php */?>
     <!-- END of BREADCRUMBS -->
     <div style="margin: 0 auto 0 auto; margin-left: 40px; height: auto; text-align: justify;">
-        <?php echo $description;?>
+        <?php $description;?>
     </div><!-- end of #contact -->
   <?php //echo $content_bottom; ?>
 </div>
+<div style="height: 90px; width: 100%;"></div>
 <?php echo $footer; ?>

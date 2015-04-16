@@ -16,7 +16,7 @@
             <?php */?>
 	<!-- END of BREADCRUMBS -->
 	
-	<div class="container account-login">
+	<div class="container account-login" style="margin-top: 0px;">
 	<!-- START of LOGIN-FORM -->
 	<div class="clearfix">
             <?php /* ?>
@@ -47,7 +47,7 @@
 		</div>
             <div id="login-footer">
                 <p style="margin-top: 20px; text-align: center; font-style: italic; font-size:13px; font-family: Arial,Helvetica,sans-serif;"><?php echo $text_login_footer; ?></p>
-                <div id="login-imagen"></div>
+                
             </div>
                 
 	</div>

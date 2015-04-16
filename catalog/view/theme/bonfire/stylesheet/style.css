@@ -244,7 +244,7 @@ a{ text-decoration:none; }
 .product-listing-related a {
     text-align:center;
 }
-.product { position:relative; float: left; margin:5px 0px 30px 0px; padding: 20px; width: 270px; height: 335px; background-color: #ffffff; border: 0px solid #ffffff; 
+.product { position:relative; float: left; margin:5px 0px 30px 0px; padding: 20px; width: 247px; height: 230px; background-color: #ffffff; border: 0px solid #ffffff; 
 	-moz-border-radius: 0px; 
 	-webkit-border-radius: 0px; 
 	border-radius: 0px; 
@@ -278,7 +278,7 @@ a{ text-decoration:none; }
 	box-shadow: 0px 0px 0px #aaa; 
 }
 
-.product .title { margin: 0px 0px 0px 0px; font: 12px Arial, Helvetica, sans-serif; color: #a7a49c; display: block; /*text-shadow: 0px 1px 1px #c9c9c9;*/ position:relative; top: 350px;}
+.product .title { margin: 0px 0px 0px 0px; font: 12px Arial, Helvetica, sans-serif; color: #a7a49c; display: block; /*text-shadow: 0px 1px 1px #c9c9c9;*/ position:relative; top: 280px;}
 .product .title:hover { color: #19233a; text-shadow: 0px 1px 1px #c7c4cc; }
 .product .info{ position:absolute; left:9px; bottom:9px; width:200px; height:32px; }
 .product .add-to-cart { float: left; display: block; width: 100px; height: 29px; text-align: center; font: 14px/29px 'corbelregular',Arial, Helvetica, sans-serif; color: #555; background-color: #f2f2f2; border: 1px solid #fff; cursor: pointer;
@@ -301,7 +301,7 @@ a{ text-decoration:none; }
 .grid-view .product p { display: none; }
 
 /** ALL-PRODUCT **/
-#all-product { margin-left: 17%; width: 700px; float: left; }
+#all-product { margin-left: 50px; width: 875px; float: left; }
 #all-product h3 { position: relative; background: url(../images/heading-ruler.png) 0px 10px repeat-x; color: #747272; font: 24px/24px 'corbelregular',Arial, Helvetica, sans-serif; margin: 0px 0px 40px 0px; }
 #all-product h3 span {  background:url(../images/bg.png) center center; padding-right:10px; }
 #all-product h3 .list { color: #C2C3C3; cursor: pointer; font: 14px/10px 'corbelregular',Arial, Helvetica, sans-serif; background: url(../images/bg.png) center center; padding: 0px 10px 0px 10px; position: absolute; right: 45px; top:10px; }
@@ -378,14 +378,14 @@ a{ text-decoration:none; }
 .cart table { width: 940px; margin: 0px 0px 20px 0px; }
 .cart table tr { border-bottom: 5px solid #efefef; }
 .cart table tr:hover { background:#fff; border-bottom: 5px solid #dedede; }
-.cart table tr th { background: #efefef; padding: 10px 0px; color: #636363; font: 14px/24px 'corbelregular',Arial, Helvetica, sans-serif; }
+.cart table tr th { background: #efefef; padding: 10px 0px; color: #636363; font: 14px Arial, Helvetica, sans-serif; }
 .cart table tr th.name-header { width: 150px; text-align: left; padding: 0px 15px; background: #efefef; color: #636363; font: 14px/24px 'corbelregular',Arial, Helvetica, sans-serif; }
-.cart table tr td { vertical-align: middle; text-align: center; padding: 5px 0px; color: #747272; font: 16px/24px 'corbelregular',Arial, Helvetica, sans-serif; }
+.cart table tr td { vertical-align: middle; text-align: center; padding: 5px 0px; color: #747272; font: 15.5px Arial, Helvetica, sans-serif; }
 .cart table tr td a { color: #C2C3C3; }
 .cart table tr td a:hover { text-decoration: underline; }
 .cart table tr td.red { color: #f84e25; }
 .cart table tr td.thumb img { border: 2px solid #efefef; }
-.cart table tr td.qty input.text{ color: #636363; font: 13px/23px 'corbelregular', Arial, Helvetica, sans-serif; color: #636363; padding: 0px 5px; width: 29px; height: 23px; background: url(../images/qty-input.png) no-repeat; border: none; outline: none; }
+.cart table tr td.qty input.text{ color: #636363; font: 15.5px Arial, Helvetica, sans-serif; color: #636363; padding: 0px 5px; width: 29px; height: 23px; background: url(../images/qty-input.png) no-repeat; border: none; outline: none; }
 .cart table tr td.name { width: 150px; text-align: left; padding: 0px 15px; }
 
 .cart .left-column { width: 500px; float: left; }
@@ -393,10 +393,10 @@ a{ text-decoration:none; }
 .cart .left-column a.apply:hover { background-position: bottom; color: #fff; }
 
 .cart .right-column { width: 320px; float: right; text-align: right; }
-.cart .right-column p { color: #C2C3C3; font: 16px/24px 'corbelregular', Arial, Helvetica, sans-serif; }
+.cart .right-column p { color: #C2C3C3; font: 15.5px, Arial, Helvetica, sans-serif; }
 .cart .right-column p a { color: #49aba8; }
 .cart .right-column p a:hover { color: #545454; }
-.cart .right-column p.total { margin: 10px 0px 20px 0px; font: 24px/24px 'corbelregular', Arial, Helvetica, sans-serif; color: #f84e25; }
+.cart .right-column p.total { margin: 10px 0px 20px 0px; font: 24px Arial, Helvetica, sans-serif; color: #f84e25; }
 .cart .right-column .checkout { display: inline-block; text-align: center; margin: 0px 0px 13px 0px; color: #C2C3C3; cursor: pointer; font: 14px/32px 'corbelregular', Arial, Helvetica, sans-serif; width: 84px; height: 33px; background: url(../images/continue-btn.png) top no-repeat; border: none; outline: none; }
 .cart .right-column .checkout:hover { background-position: bottom; color: #fff; }
 .cart .right-column .update { display: inline-block; text-align: center; margin: 0px 0px 13px 0px; color: #C2C3C3; cursor: pointer; font: 14px/32px 'corbelregular', Arial, Helvetica, sans-serif; width: 84px; height: 33px; background: url(../images/continue-btn.png) top no-repeat; border: none; outline: none; }
@@ -708,7 +708,7 @@ a{ text-decoration:none; }
 .product-tabs .tabs { overflow:hidden; margin: 0px !important; text-align: center; }
 .product-tabs .tabs li{ cursor: pointer; background:none; float:left; margin: 0px; width: 100%;}
 /*.product-tabs .tabs li a{ display:inline-block; padding: 8px 38px; background:#e1e1e1; border: none; border-top-right-radius: 5px; border-top-left-radius: 5px; font: 18px/24px 'corbelbold', Arial, Helvetica, sans-serif; color:#747272; }*/
-.product-tabs .tabs li a{ display:inline-block; border: none; border-top-right-radius: 5px; border-top-left-radius: 5px; font: 13px 'corbelregular', Arial, Helvetica, sans-serif; color:#747272; }
+.product-tabs .tabs li a{ display:inline-block; border: none; border-top-right-radius: 5px; border-top-left-radius: 5px; font: 13px Arial, Helvetica, sans-serif; color:#747272; }
 /*.product-tabs .tabs li a.current{ background:#efefef; color: #747272; }*/
 .product-tabs .tabs li a.current{ color: #747272; }
 /*.product-tabs .panes .tab-pane{ background:url(../images/tab-panes-BG.png) top repeat-x; border: none; padding:10px 0px; margin: 0px 0px 20px 0px; font: 14px/24px 'corbelregular', Arial, Helvetica, sans-serif; color:#848382; }*/
@@ -769,7 +769,7 @@ a{ text-decoration:none; }
 .login input { margin: 0px 0px 15px 0px; width: 200px; height: 26px; padding: 0px 10px; color: #4c4c4c; font: 12px/26px Arial, Helvetica, sans-serif; border:none; outline: none; background:url(../images/login-input-BG.png) no-repeat; }
 
 #login-footer {margin: 30px auto 80px auto; width: 400px; color:#C2C3C3;}
-#login-imagen {height: 118px; width: 118px; margin: 25px auto 0 auto; background: url(../images/SELLO.jpg) no-repeat;}
+#login-imagen {height: 90px; width: 204px; margin: 25px auto 0 auto; background: url(../images/bahiasello.jpg) no-repeat;}
 
 
 /** CHECKOUT **/
@@ -1047,7 +1047,7 @@ table.form td {
 .comments .comment-form h3 { padding: 0px 20px; margin: 0px 0px 20px 0px; color: #49aba8; font: 20px/28px Arial, Helvetica, sans-serif; }
 .comments .comment-form input { color: #848484; font: 15px Arial, Helvetica, sans-serif; width: 253px; height: 23px; background: url(../images/comment-form-input.png) no-repeat; border: none; outline: none; padding: 5px 10px; }
 .comments .comment-form textarea { color: #848484; font: 15px/28px Arial, Helvetica, sans-serif; resize: none; width: 300px; height: 124px; background: url(../images/comment-form-textarea.png) no-repeat; border: none; outline: none; padding: 10px; }
-.comments .comment-form label { width: 300px; float: left; color: #c2c3c3; font: 15px/28px Arial, Helvetica, sans-serif; }
+.comments .comment-form label { width: 300px; float: left; color: #c2c3c3; font: 13px Arial, Helvetica, sans-serif; }
 .comments .comment-form fieldset { position: relative; margin: 0px 0px 20px 0px; }
 .comments .comment-form fieldset.submit-button { margin: 0px 0px 0px 0px; }
 .comments .comment-form .submit { float: right; margin: 0px 50px 0px 0px; text-align:center; color: #545454; cursor: pointer; font: 14px/24px 'corbelregular', Arial, Helvetica, sans-serif; width: 84px; height: 33px; background: url(../images/continue-btn.png) top no-repeat; border: none; outline: none; }
@@ -1056,19 +1056,19 @@ table.form td {
 
 /** CONTACT **/
 #contact { width: 300px; float: left; margin: 0px 0px 40px 0px; }
-#contact h3.main-heading { position: relative; color: #FF6F00; font: 15.6px Arial, Helvetica, sans-serif; margin: 0px 0px 17px 0px; }
+#contact h3.main-heading { position: relative; color: #FF6F00; font: 13px Arial, Helvetica, sans-serif; margin: 0px 0px 17px 0px; }
 #contact h3.main-heading span {  padding-right:10px;  }
 #contact h4.sub-heading { margin: 0px 0px 20px 0px; color: #49aba8; font: 20px/28px Arial, Helvetica, sans-serif; }
 #contact .comments .comment-form div { background: #fff; }
 #contact .address { background: #fff; width: 250px; border: 1px solid #f4f3f4; margin: 0px 0px 20px 0px; }
-#contact .address em { color: #c2c3c3; font: 16px/18px Arial, Helvetica, sans-serif; }
-#contact .address p { margin: 0px 0px 20px 0px; color: #c2c3c3; font: 15px/18px Arial, Helvetica, sans-serif; }
+#contact .address em { color: #c2c3c3; font: 13px Arial, Helvetica, sans-serif; }
+#contact .address p { margin: 0px 0px 20px 0px; color: #c2c3c3; font: 13px Arial, Helvetica, sans-serif; }
 #contact #map_canvas { width: 650px; height: 300px; background:#fff; border:5px solid #fff; -webkit-box-shadow: 0px 0px 2px 0px #aaa; -moz-box-shadow: 0px 0px 2px 0px #aaa; box-shadow: 0px 0px 2px 0px #aaa; }
 #contact label.error { display: block; width: 300px; margin: 10px 0px 0px 120px; color: red; }
 #contact input.valid { color: green; }
 #contact .comment-form { position: relative; }
 #contact .comment-form #loader { margin:10px auto; display:block; display:none;}
-#contact .comment-form #result { color: #858585; font: 15px/18px Arial, Helvetica, sans-serif; display: none;}
+#contact .comment-form #result { color: #858585; font: 13px Arial, Helvetica, sans-serif; display: none;}
 
 
 /** PAGE-SINGLE **/

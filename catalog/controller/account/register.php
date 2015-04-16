@@ -22,9 +22,12 @@ class ControllerAccountRegister extends Controller {
 			
 			// Default Shipping Address
 			if ($this->config->get('config_tax_customer') == 'shipping') {
-				$this->session->data['shipping_country_id'] = $this->request->post['country_id'];
-				$this->session->data['shipping_zone_id'] = $this->request->post['zone_id'];
-				$this->session->data['shipping_postcode'] = $this->request->post['postcode'];				
+//				$this->session->data['shipping_country_id'] = $this->request->post['country_id'];
+//				$this->session->data['shipping_zone_id'] = $this->request->post['zone_id'];
+//				$this->session->data['shipping_postcode'] = $this->request->post['postcode'];				
+				$this->session->data['shipping_country_id'] = 0;
+				$this->session->data['shipping_zone_id'] = 0;
+				$this->session->data['shipping_postcode'] = 0;				
 			}
 			
 			// Default Payment Address

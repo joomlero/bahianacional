@@ -37,6 +37,8 @@ $_['entry_upc']              = 'UPC:';
 $_['entry_location']         = 'Location:';
 $_['entry_manufacturer']     = 'Manufacturer:';
 $_['entry_shipping']         = 'Requires Shipping:'; 
+$_['entry_show_attribute']   = 'Show Attribute:'; 
+$_['entry_width_range']      = 'Width Range:'; 
 $_['entry_date_available']   = 'Date Available:';
 $_['entry_quantity']         = 'Quantity:';
 $_['entry_minimum']          = 'Minimum Quantity:<br/><span class="help">Force a minimum ordered amount</span>';

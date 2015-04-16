@@ -8,9 +8,9 @@ class ControllerInformationStores extends Controller {
     	$this->document->setTitle($this->language->get('heading_title'));  
         //$arrInformations = $this->model_catalog_information->getInformations();
         $arrInformations = $this->model_catalog_information->getAllIdInformations();
-        //print '<pre>'.print_r($arrInformations,true).'</pre>';
+       // print '<pre>'.print_r($arrInformations,true).'</pre>';
         foreach($arrInformations as $information){
-            if($information['title'] == 'TIENDAS'){
+            if($information['title'] == 'TIENDAS' || $information['title'] == 'STORES'){
                 $informationId = $information['information_id'];
                 break;
             }
@@ -24,25 +24,6 @@ class ControllerInformationStores extends Controller {
             //print '<pre>'.print_r($arrInfoContacto,true).'</pre>';
         }
         
-//    	if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
-//			$mail = new Mail();
-//			$mail->protocol = $this->config->get('config_mail_protocol');
-//			$mail->parameter = $this->config->get('config_mail_parameter');
-//			$mail->hostname = $this->config->get('config_smtp_host');
-//			$mail->username = $this->config->get('config_smtp_username');
-//			$mail->password = $this->config->get('config_smtp_password');
-//			$mail->port = $this->config->get('config_smtp_port');
-//			$mail->timeout = $this->config->get('config_smtp_timeout');				
-//			$mail->setTo($this->config->get('config_email'));
-//	  		$mail->setFrom($this->request->post['email']);
-//	  		$mail->setSender($this->request->post['name']);
-//	  		$mail->setSubject(html_entity_decode(sprintf($this->language->get('email_subject'), $this->request->post['name']), ENT_QUOTES, 'UTF-8'));
-//	  		$mail->setText(strip_tags(html_entity_decode($this->request->post['enquiry'], ENT_QUOTES, 'UTF-8')));
-//      		$mail->send();
-//
-//	  		$this->redirect($this->url->link('information/contact/success'));
-//    	}
-
       	$this->data['breadcrumbs'] = array();
 
       	$this->data['breadcrumbs'][] = array(
